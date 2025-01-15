@@ -82,11 +82,11 @@
 
 .one-third {
     height: 75rem !important;
-	width: 39rem !important;
+	width: 38rem !important;
     background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	/* margin-left: 700px; */
+	/* margin-left: 200px !important;  */
 	margin-top: 40px;
 	border-bottom-left-radius: 50px !important;
 }
@@ -126,11 +126,17 @@
 		align-items: center;
     }
 	.one-third {
-		/* margin-left: 1px !important; */
+		/* margin-left: 30px !important; */
 		background-size: cover;
-		background-repeat: no-repeat;
+		background-repeat: no-repeat !important;
+		background-attachment: fixed !important; /* Prevents dragging */
 		background-position: center;
+		margin-right: -70px !important;
 	}
+	/* .img-edit {
+		padding-left: 20px !important;
+		left: 30px;
+	} */
 
 }
 
@@ -188,6 +194,14 @@
 			            <h1 class="mb-4 mt-3 move-to-bottom">I'm <span>BANTI KUMAR</span></h1>
 
 						<br><br>
+						<script> document.addEventListener('DOMContentLoaded', function() { const imageElement = document.querySelector('.one-third'); 
+						imageElement.addEventListener('dragstart', function(e) {
+							 e.preventDefault(); 
+							}); 
+						}); 
+						</script>
+						
+						
 
 						<!-- Element to contain animated typing -->
 						<span id="typing-animation"></span>
